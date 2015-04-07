@@ -26,6 +26,7 @@ module BootstrapForm
         options[:inline_errors] != false
       end
       @acts_like_form_tag = options[:acts_like_form_tag]
+      @size = options[:size] || false
 
       super
     end
@@ -177,7 +178,17 @@ module BootstrapForm
       options = args.extract_options!
       name = args.first
 
-      options[:class] = ["form-group", options[:class]].compact.join(' ')
+      size = 'form-group'
+      if @size
+        case @size
+        when :sm
+          size = 'form-group-sm'
+        when :lg
+          size = 'form-group-lg'
+        end
+      end
+      
+      options[:class] = [size, options[:class]].compact.join(' ')
       options[:class] << " #{error_class}" if has_error?(name)
       options[:class] << " #{feedback_class}" if options[:icon]
 
