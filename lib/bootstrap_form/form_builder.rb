@@ -238,7 +238,7 @@ module BootstrapForm
     end
 
     def offset_col(offset)
-      "col-sm-offset-#{offset}"
+      #"col-sm-offset-#{offset}"
     end
 
     def default_control_col
