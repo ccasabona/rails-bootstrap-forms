@@ -32,9 +32,9 @@ module BootstrapForm
     end
 
     FIELD_HELPERS.each do |method_name|
-      # with_method_name = "#{method_name}_with_bootstrap"
-      # without_method_name = "#{method_name}_without_bootstrap"
-      #
+      with_method_name = "#{method_name}_with_bootstrap"
+      without_method_name = "#{method_name}_without_bootstrap"
+
       define_method(with_method_name) do |name, options = {}|
       #define_method(method_name) do |name, options = {}|
         form_group_builder(name, options) do
@@ -49,9 +49,9 @@ module BootstrapForm
     end
 
     DATE_SELECT_HELPERS.each do |method_name|
-      # with_method_name = "#{method_name}_with_bootstrap"
-      # without_method_name = "#{method_name}_without_bootstrap"
-      #
+      with_method_name = "#{method_name}_with_bootstrap"
+      without_method_name = "#{method_name}_without_bootstrap"
+
       define_method(with_method_name) do |name, options = {}, html_options = {}|
       # define_method(method_name) do |name, options = {}, html_options = {}|
         form_group_builder(name, options, html_options) do
