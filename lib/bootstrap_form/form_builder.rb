@@ -35,8 +35,8 @@ module BootstrapForm
       # with_method_name = "#{method_name}_with_bootstrap"
       # without_method_name = "#{method_name}_without_bootstrap"
       #
-      # define_method(with_method_name) do |name, options = {}|
-      define_method(method_name) do |name, options = {}|
+      define_method(with_method_name) do |name, options = {}|
+      #define_method(method_name) do |name, options = {}|
         form_group_builder(name, options) do
           prepend_and_append_input(options) do
             send(without_method_name, name, options)
