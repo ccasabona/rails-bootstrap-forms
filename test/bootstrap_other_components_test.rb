@@ -3,9 +3,9 @@ require 'test_helper'
 class BootstrapOtherComponentsTest < ActionView::TestCase
   include BootstrapForm::Helper
 
-  def setup
-    setup_test_fixture
-  end
+  # def setup
+  #   setup_test_fixture
+  # end
 
   test "static control" do
     output = @horizontal_builder.static_control :email

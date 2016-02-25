@@ -3,9 +3,9 @@ require 'test_helper'
 class BootstrapRadioButtonTest < ActionView::TestCase
   include BootstrapForm::Helper
 
-  def setup
-    setup_test_fixture
-  end
+  # def setup
+  #   setup_test_fixture
+  # end
 
   test "radio_button is wrapped correctly" do
     expected = %{<div class="radio"><label for="user_misc_1"><input id="user_misc_1" name="user[misc]" type="radio" value="1" /> This is a radio button</label></div>}
