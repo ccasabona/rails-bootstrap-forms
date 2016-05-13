@@ -315,7 +315,7 @@ module BootstrapForm
                              []
                           end
 
-      target_validators = target.validators_on(attribute).map(&:class)
+      # target_validators = target.validators_on(attribute).map(&:class)
 
       has_presence_validator = target_validators.include?(
                                  ActiveModel::Validations::PresenceValidator)
