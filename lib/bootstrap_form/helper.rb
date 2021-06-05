@@ -8,7 +8,8 @@ module BootstrapForm
       options.reverse_merge!({builder: BootstrapForm::FormBuilder})
 
       options[:html] ||= {}
-      options[:html][:role] ||= 'form'
+      # options[:html][:role] ||= 'form'
+      options[:html][:role]
 
       layout = case options[:layout]
         when :inline
